@@ -10,6 +10,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route Component={DefaultLayout}>
+            <Route path="/" Component={Homepage} />
+            <Route path="/posts" Component={Posts} />
+            <Route path="/contacts" Component={Contacts} />
+            <Route patch="/aboutus" Component={About} />
           </Route>
         </Routes>
       </BrowserRouter>
