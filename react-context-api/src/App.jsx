@@ -9,10 +9,9 @@ import { CountContext } from './context/CountContext'
 
 function App() {
 
-
   return (
     <>
-      <CountProvider>
+      <CountContext.Provider value={{ count: 1 }}>
         <BrowserRouter>
           <Routes>
             <Route element={<DefaultLayout />}>
@@ -23,7 +22,7 @@ function App() {
             </Route>
           </Routes>
         </BrowserRouter>
-      </CountProvider>
+      </CountContext.Provider>
     </>
   )
 }

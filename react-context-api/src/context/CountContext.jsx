@@ -1,17 +1,16 @@
-import React, { createContext, useState, useContext } from 'react';
+import { createContext, useState } from 'react';
 
 // Create the context
-const CountContext = createContext();
+export const CountContext = createContext();
 
-// Custom hook for using the context
-export const useCount = () => useContext(CountContext);
-
-// Provider component
+// Create a provider component
 export const CountProvider = ({ children }) => {
+    const [count, setCount] = useState(0);
 
     return (
-        <CountContext.Provider value={value}>
+        <CountContext.Provider value={{ count, setCount }}>
             {children}
         </CountContext.Provider>
     );
 };
+

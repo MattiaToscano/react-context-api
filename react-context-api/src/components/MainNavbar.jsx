@@ -1,4 +1,3 @@
-
 import { NavLink } from 'react-router-dom'
 import "bootstrap/dist/css/bootstrap.min.css"
 
@@ -24,10 +23,10 @@ const MainNavbar = () => {
         <header>
             <nav>
                 <ul className='list-unstyled d-flex justify content-space-beetween'>
-                    {links.map((link) => {
+                    {links.map((link, index) => {
                         return (
-                            <li className='mx-2'>
-                                <NavLink to="/posts" className="nav-link">Posts</NavLink>
+                            <li key={link.path} className='mx-2'>
+                                <NavLink to={link.path} className="nav-link">{link.label}</NavLink>
                             </li>
                         )
                     })}
