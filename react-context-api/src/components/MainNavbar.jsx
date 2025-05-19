@@ -9,8 +9,8 @@ const links = [
     },
 
     {
-        path: '/product',
-        label: 'Product',
+        path: '/pages',
+        label: 'Page',
     },
 
     {
@@ -27,7 +27,7 @@ const MainNavbar = () => {
                     {links.map((link) => {
                         return (
                             <li className='mx-2'>
-                                <NavLink className='custom-links' to={link.path}>{link.label}</NavLink>
+                                <NavLink to="/posts" className="nav-link">Posts</NavLink>
                             </li>
                         )
                     })}
