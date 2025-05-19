@@ -8,8 +8,8 @@ const links = [
     },
 
     {
-        path: '/pages',
-        label: 'Page',
+        path: '/posts',
+        label: 'Post',
     },
 
     {

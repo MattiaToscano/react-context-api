@@ -1,10 +1,9 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
 import posts from '../../data/posts'
-
+import PostsList from '../../components/PostsList'
 
 const Posts = () => {
-    <PostsList posts={posts} />
+    return <PostsList posts={posts} />
 }
 
 export default Posts
